@@ -1,0 +1,6 @@
+pytest==3.0.4
+pytest-bdd==2.18.1
+pytest-html==1.11.0
+requests==2.12.1
+bottle==0.12.10
+flake8==3.2.1
