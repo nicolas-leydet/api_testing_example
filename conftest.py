@@ -34,7 +34,9 @@ def http(base_url, session):
         req = requests.Request(method, url, *args, **kwargs)
         prepared_request = req.prepare()
         print(format_as_curl(prepared_request))
-
+        # Old style from encoding content-type header needed
+        prepared_request.headers['Content-Type'] = (
+            'application/x-www-form-urlencoded')
         return session.send(prepared_request)
     return request_
 
